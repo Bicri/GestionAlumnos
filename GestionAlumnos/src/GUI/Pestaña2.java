@@ -283,6 +283,7 @@ public class Pestaña2 extends javax.swing.JFrame {
     Conexiones conecting = new Conexiones();
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         conecting.conectar();
+        conecting.muestra();
         conecting.desconectar();
     }//GEN-LAST:event_btnEliminarActionPerformed
 

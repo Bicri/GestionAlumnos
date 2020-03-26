@@ -51,6 +51,13 @@ public class Alumno {
     public void setSegundo_apellido(String segundo_apellido) {
         this.segundo_apellido = segundo_apellido;
     }
+
+    @Override
+    public String toString() {
+        return "Matricula: " + matricula + ". Nombre: " + nombre + ". Primer Apellido: " + primer_apellido + ". Segundo Apellido: " + segundo_apellido + "." ;
+    }
+    
+    
     
     
 }
