@@ -24,7 +24,8 @@ public class Conexiones {
         {
             try{
                 Class.forName("com.mysql.jdbc.Driver");
-                con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/gestionalumnos", "root", "root01");
+                con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/gestionalumnos", "root", "root");
+                System.out.println("CONECTADO");
             }catch(ClassNotFoundException | SQLException e)
             {
                 System.out.println("Error al conectar \n"+e);
@@ -35,6 +36,7 @@ public class Conexiones {
         {
             try{
                 con.close();
+                System.out.println("DESCONECTADO");
             }catch(SQLException ex)
             {
                 System.out.println("ERROR AL DESCONECTAR "+ex);
