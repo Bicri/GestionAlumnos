@@ -34,7 +34,7 @@ public class Conexiones {
         {
             try{
                 Class.forName("com.mysql.jdbc.Driver");
-                con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/gestionalumnos", "root", "root");
+                con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/gestionalumnos", "root", "root01");
                 System.out.println("CONECTADO");
             }catch(ClassNotFoundException | SQLException e)
             {

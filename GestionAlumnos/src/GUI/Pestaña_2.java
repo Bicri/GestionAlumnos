@@ -408,7 +408,7 @@ public class Pestaña_2 extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(69, 69, 69)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -653,7 +653,19 @@ public class Pestaña_2 extends javax.swing.JFrame {
       txtMatricula.setText("");
     }
     
-    DefaultTableModel modelo = new DefaultTableModel(); //Crear Modelo
+    DefaultTableModel modelo = new DefaultTableModel(){
+        @Override
+        public boolean isCellEditable(int filas, int columnas) {
+            if(columnas==1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }; //Crear Modelo
     public void listallena()
     {   
         modelo.setRowCount(0);
