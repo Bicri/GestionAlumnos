@@ -653,9 +653,10 @@ public class Pestaña_2 extends javax.swing.JFrame {
       txtMatricula.setText("");
     }
     
-    DefaultTableModel modelo = new DefaultTableModel(){
+    DefaultTableModel modelo = new DefaultTableModel(){ 
         @Override
-        public boolean isCellEditable(int filas, int columnas) {
+        public boolean isCellEditable(int filas, int columnas)
+        {
             if(columnas==1)
             {
                 return true;
@@ -665,7 +666,7 @@ public class Pestaña_2 extends javax.swing.JFrame {
                 return false;
             }
         }
-    }; //Crear Modelo
+    };
     public void listallena()
     {   
         modelo.setRowCount(0);
